@@ -9,6 +9,8 @@ export class GlobalService {
   orders: Order[] = [];
   constructor() { }
   getOrders(): Observable<Order[]>{
-  return of(this.orders)
+    let orderId = 0;
+    this.orders.forEach(order=>order.id=++orderId)
+    return of(this.orders)
   }
 }

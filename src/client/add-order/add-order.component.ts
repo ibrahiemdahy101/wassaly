@@ -13,8 +13,6 @@ import { GlobalService } from '../../global.service';
 })
 export class AddOrderComponent {
   constructor(private serv: GlobalService) { };
-
-  orderId: number = 0;
   order: Order = {} as Order;
   form = new FormGroup({
     pickUpAdress: new FormControl('',{nonNullable:true}),
@@ -27,7 +25,6 @@ export class AddOrderComponent {
   })
 
   onSubmit() {
-     this.orderId+= 1;
     const {
       pickUpAdress='',
       pickUpAdressDetails='',
@@ -40,7 +37,6 @@ export class AddOrderComponent {
 
     this.order = {
       ...this.order,
-      id:this.orderId,
       pickUpDetails: pickUpAdressDetails,
       pickUpLocation: pickUpAdress,
       deliverLocation: deliverAdress,
