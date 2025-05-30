@@ -1,0 +1,158 @@
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                  <div class="logo">
+                    <svg class="icon map-pin" viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h1><a routerLink=""> Wassaly</a></h1>
+                </div>
+                <div class="user-info">
+                    <img src="assets/users.svg" alt="Users" class="user-icon">
+                    <span>محمد أحمد - ساعي</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h2>مرحباً محمد!</h2>
+                <p>اختر الطلبات التي تريد تنفيذها</p>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>طلبات متاحة</h3>
+                        <p class="stat-number" id="availableOrders">2</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>طلباتي</h3>
+                        <p class="stat-number" id="myOrders">1</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>مكتملة اليوم</h3>
+                        <p class="stat-number" id="completedToday">5</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>الأرباح اليوم</h3>
+                        <p class="stat-number" id="todayEarnings">450 جنيه</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Available Orders -->
+            <section  class="orders-section">
+                <h3>الطلبات المتاحة</h3>
+                <div *ngFor="let order of orders" class="orders-list" id="availableOrdersList">
+                    <!-- Order Card 1 -->
+
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <div>
+                                    <h4>طلب رقم {{order.id}}</h4>
+                                    <p class="order-description">{{order.orderDetails}}</p>
+                                </div>
+                                <div class="badges">
+                                    <span class="badge badge-urgency">{{order.urgency}}</span>
+                                    <span class="badge badge-distance">8 كم</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-content">
+                            <div class="location-info">
+                                <img src="assets/map-pin.svg" alt="Pickup" class="location-icon">
+                                <span class="font-medium">من:</span>
+                                <span>{{order.pickUpLocation}}</span>
+                            </div>
+                            <div class="location-info">
+                                <img src="assets/arrow-down.svg" alt="Destination" class="location-icon">
+                                <span class="font-medium">إلى:</span>
+                                <span>{{order.deliverLocation}}</span>
+                            </div>
+                            
+                            <div class="price-info">
+                                <div class="price-details">
+                                    <span class="price-value">{{order.suggestPrice}}</span>
+                                    <span class="price-label">السعر المطلوب</span>
+                                </div>
+                                
+                                <div class="order-actions">
+                                    <div class="input-group">
+                                        <input type="number" 
+                                               class="input" 
+                                               placeholder="سعرك">
+                                        <button class="btn btn-outline btn-sm">
+                                            عرض سعر
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">
+                                        قبول بالسعر المطلوب
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="no-orders" id="noAvailableOrders" style="display: none;">
+                    <img src="assets/map-pin.svg" alt="No Orders" class="no-orders-icon">
+                    <p>لا توجد طلبات متاحة حالياً</p>
+                    <p class="sub-text">تحقق مرة أخرى لاحقاً</p>
+                </div>
+            </section>
+
+            <!-- My Orders -->
+
+            <section class="orders-section" id="myOrdersSection">
+                <h3>طلباتي الحالية</h3>
+                <div class="orders-list" id="myOrdersList">
+
+                    <!-- My Order Card -->
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <div>
+                                    <h4>طلب رقم #3</h4>
+                                    <p class="order-description">توصيل طعام</p>
+                                </div>
+                                <div class="badges">
+                                    <span class="badge badge-urgency">عادي</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-content">
+                            <div class="location-info">
+                                <img src="assets/map-pin.svg" alt="Pickup" class="location-icon">
+                                <span class="font-medium">من:</span>
+                                <span>المعادي، شارع 9</span>
+                            </div>
+                            <div class="location-info">
+                                <img src="assets/arrow-down.svg" alt="Destination" class="location-icon">
+                                <span class="font-medium">إلى:</span>
+                                <span>حلوان، الكورنيش</span>
+                            </div>
+                            
+                            <div class="price-info">
+                                <div class="price-details">
+                                    <span class="price-value">90 جنيه</span>
+                                    <span class="price-label">السعر المتفق عليه</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Toast Container -->

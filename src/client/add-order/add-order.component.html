@@ -1,0 +1,81 @@
+
+    <div class="order-container">
+        <div class="order-content">
+            <!-- Header -->
+            <div class="header">
+                <a href="/" class="logo">
+                    <svg class="icon map-pin" viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+Wassaly                </a>
+            </div>
+
+            <!-- Order Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h1>طلب توصيل جديد</h1>
+                    <p>املأ التفاصيل لإنشاء طلب التوصيل</p>
+                </div>
+
+                <div class="card-content">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()" id="orderForm" class="order-form">
+                        <!-- Pickup Location -->
+                        <div class="form-section">
+                            <h3>📍 موقع الاستلام</h3>
+                            <div class="form-group">
+                                <label for="pickupLocation">العنوان الرئيسي للاستلام</label>
+                                <input type="text" id="pickupLocation" name="pickupLocation" formControlName="pickUpAdress" required placeholder="المنطقة، الشارع، الحي">
+                            </div>
+                            <div class="form-group">
+                                <label for="pickupDetails">تفاصيل إضافية للاستلام</label>
+                                <textarea id="pickupDetails" formControlName="pickUpAdressDetails" name="pickupDetails" rows="2" placeholder="رقم المبنى، الدور، معالم مساعدة..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="form-section">
+                            <h3>🎯 موقع التسليم</h3>
+                            <div class="form-group">
+                                <label for="destinationLocation">العنوان الرئيسي للتسليم</label>
+                                <input type="text" formControlName="deliverAdress" id="destinationLocation" name="destinationLocation" required placeholder="المنطقة، الشارع، الحي">
+                            </div>
+                            <div class="form-group">
+                                <label for="destinationDetails">تفاصيل إضافية للتسليم</label>
+                                <textarea id="destinationDetails" name="destinationDetails" formControlName="deliveradressDetails" rows="2" placeholder="رقم المبنى، الدور، معالم مساعدة..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Order Details -->
+                        <div class="form-section">
+                            <h3>📦 تفاصيل الطلب</h3>
+                            <div class="form-group">
+                                <label for="description">وصف الطلب</label>
+                                <textarea formControlName="orderDetails" id="description" name="description" rows="3" placeholder="وصف الأغراض المراد توصيلها..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">السعر المقترح (جنيه مصري)</label>
+                                <input type="number" formControlName="sugestPrice" id="price" name="price" required placeholder="000" min="10">
+                                <p class="helper-text">يمكن للساعي تعديل السعر</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="urgency">درجة الاستعجال</label>
+                                <select formControlName="urgency" id="urgency" name="urgency">
+                                    <option>عادي</option>
+                                    <option>مستعجل</option>
+                                    <option>مستعجل جداً</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">إنشاء الطلب</button>
+                    </form>
+
+                    <div class="form-footer">
+                        <a routerLink="/client" class="link-primary">العودة إلى لوحة التحكم</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

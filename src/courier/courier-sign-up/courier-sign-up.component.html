@@ -1,0 +1,89 @@
+
+    <div class="signup-container">
+        <div class="signup-content">
+            <!-- Header -->
+            <div class="header">
+                <a href="/" class="logo">
+                    <svg class="icon map-pin" viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    سريع التوصيل
+                </a>
+            </div>
+
+            <!-- Signup Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <svg class="icon users" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h1>تسجيل ساعي جديد</h1>
+                    <p>انضم إلى فريق السعاة واربح المال</p>
+                </div>
+
+                <div class="form-footer">
+                        <p>
+                            لديك حساب بالفعل؟
+                            <a routerLink="/courier/dashboard"class="link-primary">تسجيل الدخول</a>
+                        </p>
+                        <p>
+                            تريد التسجيل كعميل؟
+                            <a routerLink="/client/csinup" class="link-secondary">سجل هنا</a>
+                        </p>
+                    </div>
+
+                <div class="card-content">
+                    <form id="signupForm" class="signup-form">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required placeholder="ادخل اسمك الكامل">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="01234567890">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nationalId">الرقم القومي</label>
+                            <input type="text" id="nationalId" name="nationalId" required placeholder="الرقم القومي (14 رقم)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicleType">نوع المركبة</label>
+                            <input type="text" id="vehicleType" name="vehicleType" required placeholder="دراجة نارية / سيارة / دراجة">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="licenseNumber">رقم الرخصة</label>
+                            <input type="text" id="licenseNumber" name="licenseNumber" required placeholder="رقم رخصة القيادة">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">كلمة المرور</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">تأكيد كلمة المرور</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">إنشاء حساب ساعي</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+

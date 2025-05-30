@@ -1,0 +1,176 @@
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="icon map-pin" viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h1><a routerLink=""> Wassaly</a></h1>
+                </div>
+                <div class="header-actions">
+                    <a routerLink="addorder" class="btn btn-primary">طلب توصيل جديد</a>
+                    <div class="user-info">
+                        <img src="assets/user.svg" alt="User" class="user-icon">
+                        <span>أحمد محمد</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h2>مرحباً أحمد!</h2>
+                <p>إدارة طلبات التوصيل الخاصة بك</p>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>إجمالي الطلبات</h3>
+                        <p class="stat-number">3</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>قيد التنفيذ</h3>
+                        <p class="stat-number">2</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>مكتملة</h3>
+                        <p class="stat-number">1</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Orders List -->
+            <section class="orders-section">
+                <div class="section-header">
+                    <h3>طلباتك</h3>
+                    <a routerLink="addorder" class="btn btn-primary">طلب توصيل جديد</a>
+                </div>
+
+                <div class="orders-list">
+                    <!-- Order 1 -->
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <div>
+                                    <h4>طلب رقم #1</h4>
+                                    <p class="order-description">توصيل مستندات مهمة</p>
+                                </div>
+                                <div class="badges">
+                                    <span class="badge badge-status">قيد المراجعة</span>
+                                    <span class="badge badge-urgency">مستعجل</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-content">
+                            <div class="location-info">
+                                <img src="assets/map-pin.svg" alt="Pickup" class="location-icon">
+                                <span class="font-medium">من:</span>
+                                <span>مدينة نصر، الحي الأول</span>
+                            </div>
+                            <div class="location-info">
+                                <img src="assets/arrow-down.svg" alt="Destination" class="location-icon">
+                                <span class="font-medium">إلى:</span>
+                                <span>التجمع الخامس، الكمبوند الأول</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="price-details">
+                                    <div>
+                                        <span class="price-label">السعر المطلوب:</span>
+                                        <span class="price-value">50 جنيه</span>
+                                    </div>
+                                    <div>
+                                        <span class="price-label">سعر الساعي:</span>
+                                        <span class="price-value highlight">60 جنيه</span>
+                                    </div>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn btn-outline btn-sm">رفض</button>
+                                    <button class="btn btn-primary btn-sm">موافق</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order 2 -->
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <div>
+                                    <h4>طلب رقم #2</h4>
+                                    <p class="order-description">توصيل هدية</p>
+                                </div>
+                                <div class="badges">
+                                    <span class="badge badge-status">في انتظار ساعي</span>
+                                    <span class="badge badge-urgency">عادي</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-content">
+                            <div class="location-info">
+                                <img src="assets/map-pin.svg" alt="Pickup" class="location-icon">
+                                <span class="font-medium">من:</span>
+                                <span>وسط البلد، شارع طلعت حرب</span>
+                            </div>
+                            <div class="location-info">
+                                <img src="assets/arrow-down.svg" alt="Destination" class="location-icon">
+                                <span class="font-medium">إلى:</span>
+                                <span>الزمالك، شارع الجزيرة</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="price-details">
+                                    <div>
+                                        <span class="price-label">السعر المطلوب:</span>
+                                        <span class="price-value">30 جنيه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order 3 -->
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <div>
+                                    <h4>طلب رقم #3</h4>
+                                    <p class="order-description">توصيل طعام</p>
+                                </div>
+                                <div class="badges">
+                                    <span class="badge badge-status">مكتمل</span>
+                                    <span class="badge badge-urgency">عادي</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-content">
+                            <div class="location-info">
+                                <img src="assets/map-pin.svg" alt="Pickup" class="location-icon">
+                                <span class="font-medium">من:</span>
+                                <span>المعادي، شارع 9</span>
+                            </div>
+                            <div class="location-info">
+                                <img src="assets/arrow-down.svg" alt="Destination" class="location-icon">
+                                <span class="font-medium">إلى:</span>
+                                <span>حلوان، الكورنيش</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="price-details">
+                                    <div>
+                                        <span class="price-label">السعر المطلوب:</span>
+                                        <span class="price-value">80 جنيه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
